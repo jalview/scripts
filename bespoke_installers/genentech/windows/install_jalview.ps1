@@ -1,10 +1,14 @@
 #!/usr/bin/env pwsh
 
-################
-## SET THESE! ##
-##vvvvvvvvvvvv##
-$REMOTESMBSERVER = $null      # e.g. "\\SET.THIS.SERVER\AND_PATH"
-$JALVIEWPROPERTIESURL = $null # e.g. "https://SET_THIS_SERVER.gene.com/gyst/jalview/jalview_properties"
+Param(
+  # Remote SMB //hostname/path
+  $smbserver=$null,
+  # URL to find custom jalview_properties file
+  $propsurl=$null
+)
+
+$REMOTESMBSERVER = $smbserver
+$JALVIEWPROPERTIESURL = $propsurl
 
 # Feel free to change the paths in the fully capitalised variables below though these have sensible defaults
 
